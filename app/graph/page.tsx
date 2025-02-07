@@ -29,7 +29,7 @@ export default function Graph() {
     const nextImgTypeMap: Record<'front' | 'side' | 'back', 'front' | 'side' | 'back'> = {
       front: 'side',
       side: 'back',
-      back: 'back', // 最终类型不再切换
+      back: 'front', // 最终类型不再切换
     };
   
     const nextImgType = nextImgTypeMap[imgType];
@@ -51,10 +51,11 @@ export default function Graph() {
             width={stageWidth} 
             height={stageHeight} 
             handleName={handleName}
+            scale={SCALE}
           />
         </div>
         {/* 右侧：图片说明 */}
-        <div className="md:w-2/3 flex flex-col justify-center mt-3 md:mt-0 md:ml-8">
+        <div className="md:w-1/3 flex flex-col justify-center mt-3 md:mt-0 md:ml-8">
           <h2 className="text-2xl font-bold mb-3">当前操作经络：{MERIDIANS_NAME[imgType][imgIndex]}</h2>
           <p className="mb-3">目前选中穴位：{targetName}</p>
           <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">电击治疗</button>

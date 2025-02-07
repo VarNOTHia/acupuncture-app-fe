@@ -4,8 +4,6 @@ import { Stage, Layer, Image as KonvaImage, Line, Text, Circle } from "react-kon
 import useImage from "use-image";
 import { MERIDIANS_NAME } from "./constants";
 
-const SCALE = 0.6;
-
 const getCoordinate = (coordinate: number[], scale: number) => {
   return coordinate.map(i => i * scale);
 }
@@ -16,10 +14,11 @@ interface Meridians{
   width: number,
   height: number,
   handleName: Function,
+  scale: number,
 }
 
 // 承接 state 作为该组件的 props 传入。
-export default function AnnotatedImage({ type, index, width, height, handleName }: Meridians) {
+export default function AnnotatedImage({ type, index, width, height, handleName, scale }: Meridians) {
   // 加载图片与经络数据。
   const [image] = useImage(`/img/${type}.png`);
   const [meridiansData, setMeridiansData] = useState<any>();
@@ -125,7 +124,7 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
           return (
             <Line
               key={lineIndex}
-              points={getCoordinate(lineList.flat(), SCALE)} // 起点和终点的坐标
+              points={getCoordinate(lineList.flat(), scale)} // 起点和终点的坐标
               stroke="black" // 线条颜色
               strokeWidth={1} // 线条宽度
               lineCap="round" // 线条端点样式
@@ -138,8 +137,8 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
 
         {/* 遍历每个点，绘制标记和文本 */}
         {dotList.map(([x, y], _index) => {
-          let x_pos = x * SCALE;
-          let y_pos = y * SCALE;
+          let x_pos = x * scale;
+          let y_pos = y * scale;
 
           return (
             <React.Fragment key={_index}>
@@ -147,8 +146,8 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
               <Circle
                 x={x_pos}
                 y={y_pos}
-                radius={2} // 圆的半径
-                fill={selectedIndex === _index ? "blue" : "red"} // 填充颜色
+                radius={selectedIndex === _index ? 6 * scale : 4 * scale} // 圆的半径
+                fill={selectedIndex === _index ? "red" : "blue"} // 填充颜色
                 onClick={() => {
                   setSelectedIndex(_index);
                 }}
@@ -158,7 +157,7 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
                 x={x_pos + 5} // 偏移文字到圆右侧
                 y={y_pos - 1} // 偏移文字到圆上方
                 text={nameList[_index]} // 点的编号
-                fontSize={15 * SCALE}
+                fontSize={15 * scale}
                 fill="black"
                 onClick={() => {
                   setSelectedIndex(_index);
