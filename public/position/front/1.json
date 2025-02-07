@@ -1,0 +1,86 @@
+[
+  {
+    "name": "期门",
+    "position": "front",
+    "x": 673,
+    "y": 501
+  },
+  {
+    "name": "章门",
+    "position": "front",
+    "x": 683,
+    "y": 605
+  },
+  {
+    "name": "急脉",
+    "position": "front",
+    "x": 641,
+    "y": 785
+  },
+  {
+    "name": "阴廉",
+    "position": "front",
+    "x": 631,
+    "y": 805
+  },
+  {
+    "name": "足五里",
+    "position": "front",
+    "x": 631,
+    "y": 827
+  },
+  {
+    "name": "阴包",
+    "position": "front",
+    "x": 615,
+    "y": 1007
+  },
+  {
+    "name": "__END",
+    "position": "front",
+    "x": 605,
+    "y": 1063
+  },
+  {
+    "name": "__START",
+    "position": "front",
+    "x": 611,
+    "y": 1245
+  },
+  {
+    "name": "中都",
+    "position": "front",
+    "x": 643,
+    "y": 1271
+  },
+  {
+    "name": "蠡沟",
+    "position": "front",
+    "x": 641,
+    "y": 1311
+  },
+  {
+    "name": "中封",
+    "position": "front",
+    "x": 639,
+    "y": 1419
+  },
+  {
+    "name": "太冲",
+    "position": "front",
+    "x": 665,
+    "y": 1467
+  },
+  {
+    "name": "行间",
+    "position": "front",
+    "x": 687,
+    "y": 1497
+  },
+  {
+    "name": "大敦",
+    "position": "front",
+    "x": 695,
+    "y": 1505
+  }
+]
