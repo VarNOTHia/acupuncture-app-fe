@@ -6,6 +6,10 @@ const SCALE = 0.6;
 import AnnotatedImage from "./AnnotatedImage";
 
 export default function Graph() {
+
+  useEffect(() => {
+
+  }, []);
   const stageWidth = 1200 * SCALE;
   const stageHeight = 1600 * SCALE;
   const [imgType, setImgType] = useState<'front' | 'side' | 'back'>('front');
@@ -36,7 +40,10 @@ export default function Graph() {
           <p className="mb-3">目前选中穴位：{targetName}</p>
           <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">电击治疗</button>
           <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">查看穴位简介</button>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">转身</button>
+          <button 
+            onClick={() => setImgIndex(imgIndex + 1)}
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+          >转身</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,302 @@
+[
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 597,
+    "y": 83
+  },
+  {
+    "name": "头维",
+    "position": "front",
+    "x": 642,
+    "y": 110
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 654,
+    "y": 195
+  },
+  {
+    "name": "下关",
+    "position": "front",
+    "x": 647,
+    "y": 208
+  },
+  {
+    "name": "颊车",
+    "position": "front",
+    "x": 637,
+    "y": 240
+  },
+  {
+    "name": "大迎",
+    "position": "front",
+    "x": 629,
+    "y": 255
+  },
+  {
+    "name": "地仓",
+    "position": "front",
+    "x": 622,
+    "y": 238
+  },
+  {
+    "name": "巨髎",
+    "position": "front",
+    "x": 622,
+    "y": 215
+  },
+  {
+    "name": "四白",
+    "position": "front",
+    "x": 622,
+    "y": 198
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 622,
+    "y": 215
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 622,
+    "y": 238
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 624,
+    "y": 255
+  },
+  {
+    "name": "人迎",
+    "position": "front",
+    "x": 617,
+    "y": 292
+  },
+  {
+    "name": "水突",
+    "position": "front",
+    "x": 617,
+    "y": 309
+  },
+  {
+    "name": "气舍",
+    "position": "front",
+    "x": 617,
+    "y": 327
+  },
+  {
+    "name": "缺盆\t",
+    "position": "front",
+    "x": 658,
+    "y": 325
+  },
+  {
+    "name": "气户",
+    "position": "front",
+    "x": 658,
+    "y": 343
+  },
+  {
+    "name": "库房",
+    "position": "front",
+    "x": 662,
+    "y": 368
+  },
+  {
+    "name": "屋翳",
+    "position": "front",
+    "x": 665,
+    "y": 396
+  },
+  {
+    "name": "膺窗",
+    "position": "front",
+    "x": 667,
+    "y": 421
+  },
+  {
+    "name": "乳中",
+    "position": "front",
+    "x": 667,
+    "y": 450
+  },
+  {
+    "name": "乳根",
+    "position": "front",
+    "x": 667,
+    "y": 472
+  },
+  {
+    "name": "不容",
+    "position": "front",
+    "x": 627,
+    "y": 518
+  },
+  {
+    "name": "承满",
+    "position": "front",
+    "x": 625,
+    "y": 536
+  },
+  {
+    "name": "梁门",
+    "position": "front",
+    "x": 627,
+    "y": 559
+  },
+  {
+    "name": "关门",
+    "position": "front",
+    "x": 627,
+    "y": 579
+  },
+  {
+    "name": "太乙",
+    "position": "front",
+    "x": 627,
+    "y": 601
+  },
+  {
+    "name": "滑肉门",
+    "position": "front",
+    "x": 625,
+    "y": 625
+  },
+  {
+    "name": "天枢",
+    "position": "front",
+    "x": 625,
+    "y": 647
+  },
+  {
+    "name": "外陵",
+    "position": "front",
+    "x": 625,
+    "y": 670
+  },
+  {
+    "name": "大巨",
+    "position": "front",
+    "x": 625,
+    "y": 694
+  },
+  {
+    "name": "水道",
+    "position": "front",
+    "x": 625,
+    "y": 718
+  },
+  {
+    "name": "归来",
+    "position": "front",
+    "x": 625,
+    "y": 741
+  },
+  {
+    "name": "气冲",
+    "position": "front",
+    "x": 625,
+    "y": 763
+  },
+  {
+    "name": "髀关",
+    "position": "front",
+    "x": 694,
+    "y": 838
+  },
+  {
+    "name": "伏兔",
+    "position": "front",
+    "x": 676,
+    "y": 970
+  },
+  {
+    "name": "阴市",
+    "position": "front",
+    "x": 669,
+    "y": 1024
+  },
+  {
+    "name": "梁丘",
+    "position": "front",
+    "x": 665,
+    "y": 1042
+  },
+  {
+    "name": "犊鼻",
+    "position": "front",
+    "x": 663,
+    "y": 1114
+  },
+  {
+    "name": "足三里",
+    "position": "front",
+    "x": 663,
+    "y": 1172
+  },
+  {
+    "name": "阑尾",
+    "position": "front",
+    "x": 665,
+    "y": 1203
+  },
+  {
+    "name": "上巨虚",
+    "position": "front",
+    "x": 665,
+    "y": 1224
+  },
+  {
+    "name": "条口",
+    "position": "front",
+    "x": 663,
+    "y": 1259
+  },
+  {
+    "name": "下巨虚",
+    "position": "front",
+    "x": 663,
+    "y": 1279
+  },
+  {
+    "name": "丰隆",
+    "position": "front",
+    "x": 678,
+    "y": 1261
+  },
+  {
+    "name": "解溪",
+    "position": "front",
+    "x": 647,
+    "y": 1412
+  },
+  {
+    "name": "冲阳",
+    "position": "front",
+    "x": 665,
+    "y": 1452
+  },
+  {
+    "name": "陷谷",
+    "position": "front",
+    "x": 683,
+    "y": 1472
+  },
+  {
+    "name": "内庭",
+    "position": "front",
+    "x": 694,
+    "y": 1485
+  },
+  {
+    "name": "厉兑",
+    "position": "front",
+    "x": 711,
+    "y": 1501
+  }
+]

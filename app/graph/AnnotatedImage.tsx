@@ -25,7 +25,19 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
   const [meridiansData, setMeridiansData] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true); // 加载状态
   const [error, setError] = useState<string | null>(null); // 错误状态
-  const [positionList, setPositionList] = useState<any[]>([]);  // 分拆坐标列表
+  /**
+   * 分拆直线坐标列表。
+   * 该列表是一个二元数组，由 meridiansData 的不同数组分拆而来。
+   */
+  const [linesList, setLinesList] = useState<any[]>([]);  // 分拆直线坐标列表
+
+  /**
+   * 分拆经络点列表。
+   * 该列表是一个一元数组，是去除了中断符号（__START __END __BYPASS）的常规点位。
+   */
+  const [dotList, setDotList] = useState<any[]>([]);
+
+  
   const [nameList, setNameList] = useState<string[]>([]); // 拆分名称列表
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
 
@@ -68,13 +80,29 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
           throw new Error("response was not ok");
         }
 
+        // 一维 data 数组
         const data = await response.json();
+        // 二维 data 数组
         let divided_data = divideBreakpoint(data);
+        
+        // 把请求得到的 json 分割成一系列的列表后，转换出一系列的坐标列表。
+        setLinesList(divided_data.map((line, line_index) => {
+          return line.map((i: any) => [i.x, i.y]);
+        }))
 
-        setMeridiansData(data); // 设置加载的 JSON 数据
-        setPositionList(data.map((i: any) => [i.x, i.y]));  // 设置坐标
-        setNameList(data.map((i: any) => i.name));
-        console.log(data.map((i: any) => [i.x, i.y]));
+        // 过滤掉分隔符号之后的穴位列表
+        setDotList(data
+          .filter((item: any) => item.name !== '__START' && item.name !== '__END' && item.name !== '__BYPASS')
+          .map((item: any) => {
+            return [item.x, item.y];
+          }));
+        
+        // 穴位对应的名称列表
+        setNameList(data
+          .filter((item: any) => item.name !== '__START' && item.name !== '__END' && item.name !== '__BYPASS')
+          .map(item => item.name)
+        );
+
         setSelectedIndex(-1);
       } catch (err) {
         setError("Failed to load the JSON data");
@@ -93,17 +121,23 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
         {/* 绘制背景图片 */}
         <KonvaImage image={image} width={width} height={height} />
 
+        {linesList.map((lineList, lineIndex) => {
+          return (
+            <Line
+              key={lineIndex}
+              points={getCoordinate(lineList.flat(), SCALE)} // 起点和终点的坐标
+              stroke="black" // 线条颜色
+              strokeWidth={1} // 线条宽度
+              lineCap="round" // 线条端点样式
+              lineJoin="round" // 线条连接样式
+            />
+          )
+        })}
         {/* 连线 */}
-        <Line
-          points={getCoordinate(positionList.flat(), SCALE)} // 起点和终点的坐标
-          stroke="black" // 线条颜色
-          strokeWidth={1} // 线条宽度
-          lineCap="round" // 线条端点样式
-          lineJoin="round" // 线条连接样式
-        />
+        
 
         {/* 遍历每个点，绘制标记和文本 */}
-        {positionList.map(([x, y], _index) => {
+        {dotList.map(([x, y], _index) => {
           let x_pos = x * SCALE;
           let y_pos = y * SCALE;
 

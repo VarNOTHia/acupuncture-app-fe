@@ -1,0 +1,110 @@
+[
+  {
+    "name": "中府",
+    "position": "front",
+    "x": 698,
+    "y": 360
+  },
+  {
+    "name": "云门",
+    "position": "front",
+    "x": 696,
+    "y": 336
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 712,
+    "y": 340
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 718,
+    "y": 346
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 727,
+    "y": 351
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 735,
+    "y": 359
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 746,
+    "y": 376
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 760,
+    "y": 405
+  },
+  {
+    "name": "__BYPASS",
+    "position": "front",
+    "x": 768,
+    "y": 436
+  },
+  {
+    "name": "天府",
+    "position": "front",
+    "x": 776,
+    "y": 480
+  },
+  {
+    "name": "侠白",
+    "position": "front",
+    "x": 778,
+    "y": 495
+  },
+  {
+    "name": "尺泽",
+    "position": "front",
+    "x": 796,
+    "y": 589
+  },
+  {
+    "name": "孔最",
+    "position": "front",
+    "x": 825,
+    "y": 675
+  },
+  {
+    "name": "列缺",
+    "position": "front",
+    "x": 861,
+    "y": 762
+  },
+  {
+    "name": "经渠",
+    "position": "front",
+    "x": 861,
+    "y": 773
+  },
+  {
+    "name": "太渊",
+    "position": "front",
+    "x": 867,
+    "y": 786
+  },
+  {
+    "name": "鱼际",
+    "position": "front",
+    "x": 894,
+    "y": 806
+  },
+  {
+    "name": "少商",
+    "position": "front",
+    "x": 936,
+    "y": 842
+  }
+]
