@@ -1,0 +1,140 @@
+[
+  {
+    "name": "迎香",
+    "position": "side",
+    "x": 552,
+    "y": 226
+  },
+  {
+    "name": "口禾髎",
+    "position": "side",
+    "x": 546,
+    "y": 240
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 587,
+    "y": 263
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 607,
+    "y": 280
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 618,
+    "y": 296
+  },
+  {
+    "name": "扶突",
+    "position": "side",
+    "x": 624,
+    "y": 308
+  },
+  {
+    "name": "天鼎",
+    "position": "side",
+    "x": 631,
+    "y": 329
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 728,
+    "y": 347
+  },
+  {
+    "name": "肩髃",
+    "position": "side",
+    "x": 710,
+    "y": 370
+  },
+  {
+    "name": "臂臑",
+    "position": "side",
+    "x": 762,
+    "y": 425
+  },
+  {
+    "name": "手五里",
+    "position": "side",
+    "x": 816,
+    "y": 487
+  },
+  {
+    "name": "肘髎",
+    "position": "side",
+    "x": 840,
+    "y": 511
+  },
+  {
+    "name": "曲池",
+    "position": "side",
+    "x": 836,
+    "y": 529
+  },
+  {
+    "name": "手三里",
+    "position": "side",
+    "x": 826,
+    "y": 564
+  },
+  {
+    "name": "上廉",
+    "position": "side",
+    "x": 821,
+    "y": 578
+  },
+  {
+    "name": "下廉",
+    "position": "side",
+    "x": 818,
+    "y": 593
+  },
+  {
+    "name": "温溜",
+    "position": "side",
+    "x": 808,
+    "y": 639
+  },
+  {
+    "name": "偏历",
+    "position": "side",
+    "x": 799,
+    "y": 674
+  },
+  {
+    "name": "阳溪",
+    "position": "side",
+    "x": 778,
+    "y": 717
+  },
+  {
+    "name": "合谷",
+    "position": "side",
+    "x": 767,
+    "y": 754
+  },
+  {
+    "name": "三间",
+    "position": "side",
+    "x": 771,
+    "y": 772
+  },
+  {
+    "name": "二间",
+    "position": "side",
+    "x": 771,
+    "y": 791
+  },
+  {
+    "name": "商阳",
+    "position": "side",
+    "x": 765,
+    "y": 844
+  }
+]

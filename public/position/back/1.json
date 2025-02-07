@@ -1,0 +1,98 @@
+[
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 653,
+    "y": 271
+  },
+  {
+    "name": "肩中俞",
+    "position": "back",
+    "x": 641,
+    "y": 297
+  },
+  {
+    "name": "肩外俞",
+    "position": "back",
+    "x": 659,
+    "y": 317
+  },
+  {
+    "name": "曲垣",
+    "position": "back",
+    "x": 677,
+    "y": 341
+  },
+  {
+    "name": "秉风",
+    "position": "back",
+    "x": 701,
+    "y": 331
+  },
+  {
+    "name": "天宗",
+    "position": "back",
+    "x": 701,
+    "y": 385
+  },
+  {
+    "name": "臑俞",
+    "position": "back",
+    "x": 739,
+    "y": 339
+  },
+  {
+    "name": "肩贞",
+    "position": "back",
+    "x": 739,
+    "y": 419
+  },
+  {
+    "name": "小海",
+    "position": "back",
+    "x": 763,
+    "y": 627
+  },
+  {
+    "name": "支正",
+    "position": "back",
+    "x": 802,
+    "y": 729
+  },
+  {
+    "name": "养老",
+    "position": "back",
+    "x": 842,
+    "y": 801
+  },
+  {
+    "name": "阳谷",
+    "position": "back",
+    "x": 843,
+    "y": 816
+  },
+  {
+    "name": "腕谷",
+    "position": "back",
+    "x": 842,
+    "y": 837
+  },
+  {
+    "name": "后溪",
+    "position": "back",
+    "x": 848,
+    "y": 869
+  },
+  {
+    "name": "前谷",
+    "position": "back",
+    "x": 855,
+    "y": 888
+  },
+  {
+    "name": "少泽",
+    "position": "back",
+    "x": 869,
+    "y": 923
+  }
+]

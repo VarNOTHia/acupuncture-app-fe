@@ -1,0 +1,398 @@
+[
+  {
+    "name": "至阴",
+    "position": "back",
+    "x": 725,
+    "y": 1516
+  },
+  {
+    "name": "足通谷",
+    "position": "back",
+    "x": 717,
+    "y": 1518
+  },
+  {
+    "name": "束骨",
+    "position": "back",
+    "x": 707,
+    "y": 1520
+  },
+  {
+    "name": "京骨",
+    "position": "back",
+    "x": 699,
+    "y": 1518
+  },
+  {
+    "name": "金门",
+    "position": "back",
+    "x": 687,
+    "y": 1518
+  },
+  {
+    "name": "申脉",
+    "position": "back",
+    "x": 671,
+    "y": 1499
+  },
+  {
+    "name": "仆参",
+    "position": "back",
+    "x": 656,
+    "y": 1518
+  },
+  {
+    "name": "昆仑",
+    "position": "back",
+    "x": 658,
+    "y": 1486
+  },
+  {
+    "name": "跗阳",
+    "position": "back",
+    "x": 666,
+    "y": 1425
+  },
+  {
+    "name": "飞扬",
+    "position": "back",
+    "x": 679,
+    "y": 1340
+  },
+  {
+    "name": "承山",
+    "position": "back",
+    "x": 659,
+    "y": 1320
+  },
+  {
+    "name": "承筋",
+    "position": "back",
+    "x": 659,
+    "y": 1256
+  },
+  {
+    "name": "合阳",
+    "position": "back",
+    "x": 658,
+    "y": 1196
+  },
+  {
+    "name": "委中",
+    "position": "back",
+    "x": 657,
+    "y": 1153
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 637,
+    "y": 893
+  },
+  {
+    "name": "秩边",
+    "position": "back",
+    "x": 651,
+    "y": 767
+  },
+  {
+    "name": "胞肓",
+    "position": "back",
+    "x": 653,
+    "y": 731
+  },
+  {
+    "name": "志室",
+    "position": "back",
+    "x": 653,
+    "y": 628
+  },
+  {
+    "name": "肓门",
+    "position": "back",
+    "x": 653,
+    "y": 606
+  },
+  {
+    "name": "胃仓",
+    "position": "back",
+    "x": 653,
+    "y": 586
+  },
+  {
+    "name": "意舍",
+    "position": "back",
+    "x": 653,
+    "y": 569
+  },
+  {
+    "name": "阳纲",
+    "position": "back",
+    "x": 653,
+    "y": 550
+  },
+  {
+    "name": "魂门",
+    "position": "back",
+    "x": 653,
+    "y": 527
+  },
+  {
+    "name": "膈关",
+    "position": "back",
+    "x": 651,
+    "y": 473
+  },
+  {
+    "name": "ishi",
+    "position": "back",
+    "x": 651,
+    "y": 449
+  },
+  {
+    "name": "神堂",
+    "position": "back",
+    "x": 651,
+    "y": 423
+  },
+  {
+    "name": "膏肓",
+    "position": "back",
+    "x": 651,
+    "y": 399
+  },
+  {
+    "name": "魄户",
+    "position": "back",
+    "x": 651,
+    "y": 367
+  },
+  {
+    "name": "附分",
+    "position": "back",
+    "x": 651,
+    "y": 348
+  },
+  {
+    "name": "天柱",
+    "position": "back",
+    "x": 608,
+    "y": 234
+  },
+  {
+    "name": "玉枕",
+    "position": "back",
+    "x": 610,
+    "y": 164
+  },
+  {
+    "name": "络却",
+    "position": "back",
+    "x": 615,
+    "y": 63
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 616,
+    "y": 54
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 616,
+    "y": 76
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 610,
+    "y": 164
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 608,
+    "y": 236
+  },
+  {
+    "name": "大杼",
+    "position": "back",
+    "x": 623,
+    "y": 322
+  },
+  {
+    "name": "风门",
+    "position": "back",
+    "x": 623,
+    "y": 345
+  },
+  {
+    "name": "肺俞",
+    "position": "back",
+    "x": 624,
+    "y": 369
+  },
+  {
+    "name": "厥阴俞",
+    "position": "back",
+    "x": 624,
+    "y": 397
+  },
+  {
+    "name": "心俞",
+    "position": "back",
+    "x": 623,
+    "y": 425
+  },
+  {
+    "name": "督俞",
+    "position": "back",
+    "x": 624,
+    "y": 449
+  },
+  {
+    "name": "膈俞",
+    "position": "back",
+    "x": 623,
+    "y": 473
+  },
+  {
+    "name": "肝俞",
+    "position": "back",
+    "x": 624,
+    "y": 527
+  },
+  {
+    "name": "胆俞",
+    "position": "back",
+    "x": 624,
+    "y": 549
+  },
+  {
+    "name": "脾俞",
+    "position": "back",
+    "x": 624,
+    "y": 570
+  },
+  {
+    "name": "胃俞",
+    "position": "back",
+    "x": 624,
+    "y": 589
+  },
+  {
+    "name": "三焦俞",
+    "position": "back",
+    "x": 626,
+    "y": 604
+  },
+  {
+    "name": "肾俞",
+    "position": "back",
+    "x": 624,
+    "y": 629
+  },
+  {
+    "name": "气海俞",
+    "position": "back",
+    "x": 624,
+    "y": 652
+  },
+  {
+    "name": "大肠俞",
+    "position": "back",
+    "x": 624,
+    "y": 675
+  },
+  {
+    "name": "关元俞",
+    "position": "back",
+    "x": 623,
+    "y": 703
+  },
+  {
+    "name": "小肠俞",
+    "position": "back",
+    "x": 623,
+    "y": 718
+  },
+  {
+    "name": "膀胱俞",
+    "position": "back",
+    "x": 623,
+    "y": 732
+  },
+  {
+    "name": "中膂俞",
+    "position": "back",
+    "x": 623,
+    "y": 752
+  },
+  {
+    "name": "白环俞",
+    "position": "back",
+    "x": 623,
+    "y": 767
+  },
+  {
+    "name": "上髎",
+    "position": "back",
+    "x": 609,
+    "y": 716
+  },
+  {
+    "name": "次髎",
+    "position": "back",
+    "x": 609,
+    "y": 734
+  },
+  {
+    "name": "中髎",
+    "position": "back",
+    "x": 609,
+    "y": 752
+  },
+  {
+    "name": "下髎",
+    "position": "back",
+    "x": 609,
+    "y": 767
+  },
+  {
+    "name": "会阳",
+    "position": "back",
+    "x": 609,
+    "y": 792
+  },
+  {
+    "name": "承扶",
+    "position": "back",
+    "x": 652,
+    "y": 872
+  },
+  {
+    "name": "殷门",
+    "position": "back",
+    "x": 652,
+    "y": 995
+  },
+  {
+    "name": "浮郗",
+    "position": "back",
+    "x": 678,
+    "y": 1135
+  },
+  {
+    "name": "委阳",
+    "position": "back",
+    "x": 680,
+    "y": 1155
+  },
+  {
+    "name": "__BYPASS",
+    "position": "back",
+    "x": 656,
+    "y": 1155
+  }
+]

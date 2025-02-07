@@ -158,7 +158,7 @@ export default function AnnotatedImage({ type, index, width, height, handleName 
                 x={x_pos + 5} // 偏移文字到圆右侧
                 y={y_pos - 1} // 偏移文字到圆上方
                 text={nameList[_index]} // 点的编号
-                fontSize={12 * SCALE}
+                fontSize={15 * SCALE}
                 fill="black"
                 onClick={() => {
                   setSelectedIndex(_index);

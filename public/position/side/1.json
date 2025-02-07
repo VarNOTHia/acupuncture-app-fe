@@ -1,0 +1,482 @@
+[
+  {
+    "name": "瞳子髎",
+    "position": "side",
+    "x": 572,
+    "y": 197
+  },
+  {
+    "name": "听会",
+    "position": "side",
+    "x": 624,
+    "y": 225
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 603,
+    "y": 203
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 610,
+    "y": 150
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 627,
+    "y": 183
+  },
+  {
+    "name": "率谷",
+    "position": "side",
+    "x": 646,
+    "y": 159
+  },
+  {
+    "name": "天冲",
+    "position": "side",
+    "x": 658,
+    "y": 159
+  },
+  {
+    "name": "浮白",
+    "position": "side",
+    "x": 668,
+    "y": 183
+  },
+  {
+    "name": "头窍阴",
+    "position": "side",
+    "x": 672,
+    "y": 212
+  },
+  {
+    "name": "完骨",
+    "position": "side",
+    "x": 666,
+    "y": 238
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 677,
+    "y": 211
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 680,
+    "y": 195
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 681,
+    "y": 182
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 679,
+    "y": 167
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 673,
+    "y": 156
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 666,
+    "y": 147
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 658,
+    "y": 140
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 648,
+    "y": 133
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 635,
+    "y": 128
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 618,
+    "y": 128
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 603,
+    "y": 131
+  },
+  {
+    "name": "本神",
+    "position": "side",
+    "x": 590,
+    "y": 137
+  },
+  {
+    "name": "阳白",
+    "position": "side",
+    "x": 557,
+    "y": 159
+  },
+  {
+    "name": "头临泣",
+    "position": "side",
+    "x": 583,
+    "y": 131
+  },
+  {
+    "name": "正营",
+    "position": "side",
+    "x": 613,
+    "y": 119
+  },
+  {
+    "name": "承灵",
+    "position": "side",
+    "x": 638,
+    "y": 118
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 656,
+    "y": 128
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 666,
+    "y": 136
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 672,
+    "y": 143
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 681,
+    "y": 154
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 687,
+    "y": 168
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 689,
+    "y": 181
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 689,
+    "y": 196
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 686,
+    "y": 211
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 682,
+    "y": 224
+  },
+  {
+    "name": "风池",
+    "position": "side",
+    "x": 676,
+    "y": 236
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 667,
+    "y": 250
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 663,
+    "y": 260
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 662,
+    "y": 268
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 662,
+    "y": 278
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 664,
+    "y": 289
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 666,
+    "y": 298
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 671,
+    "y": 308
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 676,
+    "y": 317
+  },
+  {
+    "name": "肩井",
+    "position": "side",
+    "x": 682,
+    "y": 325
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 666,
+    "y": 364
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 657,
+    "y": 392
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 656,
+    "y": 402
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 655,
+    "y": 413
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 655,
+    "y": 425
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 657,
+    "y": 437
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 659,
+    "y": 447
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 661,
+    "y": 453
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 664,
+    "y": 456
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 666,
+    "y": 461
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 670,
+    "y": 469
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 673,
+    "y": 472
+  },
+  {
+    "name": "渊腋",
+    "position": "side",
+    "x": 677,
+    "y": 479
+  },
+  {
+    "name": "辄筋",
+    "position": "side",
+    "x": 658,
+    "y": 485
+  },
+  {
+    "name": "日月",
+    "position": "side",
+    "x": 554,
+    "y": 560
+  },
+  {
+    "name": "京门",
+    "position": "side",
+    "x": 632,
+    "y": 627
+  },
+  {
+    "name": "带脉",
+    "position": "side",
+    "x": 603,
+    "y": 664
+  },
+  {
+    "name": "五枢",
+    "position": "side",
+    "x": 553,
+    "y": 745
+  },
+  {
+    "name": "微道",
+    "position": "side",
+    "x": 547,
+    "y": 757
+  },
+  {
+    "name": "居髎",
+    "position": "side",
+    "x": 598,
+    "y": 783
+  },
+  {
+    "name": "环跳",
+    "position": "side",
+    "x": 651,
+    "y": 811
+  },
+  {
+    "name": "风市",
+    "position": "side",
+    "x": 649,
+    "y": 1021
+  },
+  {
+    "name": "中渎",
+    "position": "side",
+    "x": 649,
+    "y": 1051
+  },
+  {
+    "name": "膝阳关",
+    "position": "side",
+    "x": 664,
+    "y": 1112
+  },
+  {
+    "name": "阳陵泉",
+    "position": "side",
+    "x": 665,
+    "y": 1196
+  },
+  {
+    "name": "阳交",
+    "position": "side",
+    "x": 684,
+    "y": 1326
+  },
+  {
+    "name": "外丘",
+    "position": "side",
+    "x": 667,
+    "y": 1325
+  },
+  {
+    "name": "光明",
+    "position": "side",
+    "x": 668,
+    "y": 1365
+  },
+  {
+    "name": "阳辅",
+    "position": "side",
+    "x": 664,
+    "y": 1385
+  },
+  {
+    "name": "悬钟",
+    "position": "side",
+    "x": 668,
+    "y": 1402
+  },
+  {
+    "name": "丘墟",
+    "position": "side",
+    "x": 653,
+    "y": 1468
+  },
+  {
+    "name": "足临泣",
+    "position": "side",
+    "x": 619,
+    "y": 1496
+  },
+  {
+    "name": "地五会",
+    "position": "side",
+    "x": 594,
+    "y": 1505
+  },
+  {
+    "name": "侠溪",
+    "position": "side",
+    "x": 565,
+    "y": 1511
+  },
+  {
+    "name": "足窍阴",
+    "position": "side",
+    "x": 546,
+    "y": 1523
+  }
+]

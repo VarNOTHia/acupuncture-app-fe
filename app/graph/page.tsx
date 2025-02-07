@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import { MERIDIANS_NAME } from "./constants";
+import { MAX_GROUP_OF, MERIDIANS_NAME } from "./constants";
 
 const SCALE = 0.6;
 import AnnotatedImage from "./AnnotatedImage";
@@ -18,6 +18,25 @@ export default function Graph() {
   const handleName = (name: string) => {
     setTargetName(name);
   }
+
+  const handleContinue = () => {
+    if (imgIndex < MAX_GROUP_OF[imgType]) {
+      setImgIndex(imgIndex + 1);
+      return;
+    }
+  
+    // 定义切换逻辑
+    const nextImgTypeMap: Record<'front' | 'side' | 'back', 'front' | 'side' | 'back'> = {
+      front: 'side',
+      side: 'back',
+      back: 'back', // 最终类型不再切换
+    };
+  
+    const nextImgType = nextImgTypeMap[imgType];
+  
+    setImgType(nextImgType);
+    setImgIndex(1); // 切换类型时，重置 `imgIndex` 到初始值
+  };
 
   return (
     <div
@@ -39,11 +58,11 @@ export default function Graph() {
           <h2 className="text-2xl font-bold mb-3">当前操作经络：{MERIDIANS_NAME[imgType][imgIndex]}</h2>
           <p className="mb-3">目前选中穴位：{targetName}</p>
           <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">电击治疗</button>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">查看穴位简介</button>
+          <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">加入收藏夹</button>
           <button 
-            onClick={() => setImgIndex(imgIndex + 1)}
+            onClick={handleContinue}
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-          >转身</button>
+          >下一张</button>
         </div>
       </div>
     </div>

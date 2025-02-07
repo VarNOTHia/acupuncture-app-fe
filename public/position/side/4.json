@@ -1,0 +1,194 @@
+[
+  {
+    "name": "丝竹空",
+    "position": "side",
+    "x": 572,
+    "y": 177
+  },
+  {
+    "name": "耳和髎",
+    "position": "side",
+    "x": 621,
+    "y": 188
+  },
+  {
+    "name": "耳门",
+    "position": "side",
+    "x": 625,
+    "y": 210
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 625,
+    "y": 200
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 632,
+    "y": 189
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 641,
+    "y": 182
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 645,
+    "y": 180
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 658,
+    "y": 180
+  },
+  {
+    "name": "角孙",
+    "position": "side",
+    "x": 661,
+    "y": 180
+  },
+  {
+    "name": "颅息",
+    "position": "side",
+    "x": 665,
+    "y": 193
+  },
+  {
+    "name": "瘈脉",
+    "position": "side",
+    "x": 665,
+    "y": 209
+  },
+  {
+    "name": "翳风",
+    "position": "side",
+    "x": 661,
+    "y": 220
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 654,
+    "y": 233
+  },
+  {
+    "name": "天牖",
+    "position": "side",
+    "x": 643,
+    "y": 238
+  },
+  {
+    "name": "__END",
+    "position": "side",
+    "x": 678,
+    "y": 300
+  },
+  {
+    "name": "__START",
+    "position": "side",
+    "x": 732,
+    "y": 347
+  },
+  {
+    "name": "肩髎",
+    "position": "side",
+    "x": 732,
+    "y": 360
+  },
+  {
+    "name": "臑会",
+    "position": "side",
+    "x": 770,
+    "y": 404
+  },
+  {
+    "name": "消泺",
+    "position": "side",
+    "x": 825,
+    "y": 451
+  },
+  {
+    "name": "清冷渊",
+    "position": "side",
+    "x": 863,
+    "y": 489
+  },
+  {
+    "name": "天井",
+    "position": "side",
+    "x": 874,
+    "y": 498
+  },
+  {
+    "name": "__END",
+    "position": "side",
+    "x": 885,
+    "y": 509
+  },
+  {
+    "name": "__START",
+    "position": "side",
+    "x": 890,
+    "y": 542
+  },
+  {
+    "name": "四渎",
+    "position": "side",
+    "x": 854,
+    "y": 617
+  },
+  {
+    "name": "三阳络",
+    "position": "side",
+    "x": 821,
+    "y": 664
+  },
+  {
+    "name": "会宗",
+    "position": "side",
+    "x": 823,
+    "y": 686
+  },
+  {
+    "name": "支沟",
+    "position": "side",
+    "x": 814,
+    "y": 682
+  },
+  {
+    "name": "外关",
+    "position": "side",
+    "x": 810,
+    "y": 700
+  },
+  {
+    "name": "阳池",
+    "position": "side",
+    "x": 798,
+    "y": 726
+  },
+  {
+    "name": "中渚",
+    "position": "side",
+    "x": 821,
+    "y": 777
+  },
+  {
+    "name": "夜门",
+    "position": "side",
+    "x": 821,
+    "y": 797
+  },
+  {
+    "name": "关冲",
+    "position": "side",
+    "x": 798,
+    "y": 853
+  }
+]

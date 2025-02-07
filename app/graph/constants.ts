@@ -9,3 +9,9 @@ export const MERIDIANS_NAME = {
     null, '手太阳小肠经', '足太阳膀胱经', '督脉',
   ]
 };
+
+export const MAX_GROUP_OF = {
+  front: 7,
+  side: 4,
+  back: 3
+}

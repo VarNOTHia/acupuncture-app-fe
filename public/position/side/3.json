@@ -1,0 +1,230 @@
+[
+  {
+    "name": "俞府",
+    "position": "side",
+    "x": 595,
+    "y": 364
+  },
+  {
+    "name": "彧中",
+    "position": "side",
+    "x": 576,
+    "y": 388
+  },
+  {
+    "name": "神藏",
+    "position": "side",
+    "x": 563,
+    "y": 414
+  },
+  {
+    "name": "灵墟",
+    "position": "side",
+    "x": 550,
+    "y": 436
+  },
+  {
+    "name": "神封",
+    "position": "side",
+    "x": 539,
+    "y": 462
+  },
+  {
+    "name": "步廊",
+    "position": "side",
+    "x": 531,
+    "y": 490
+  },
+  {
+    "name": "幽门",
+    "position": "side",
+    "x": 520,
+    "y": 530
+  },
+  {
+    "name": "腹通谷",
+    "position": "side",
+    "x": 518,
+    "y": 550
+  },
+  {
+    "name": "阴都",
+    "position": "side",
+    "x": 514,
+    "y": 570
+  },
+  {
+    "name": "石关",
+    "position": "side",
+    "x": 512,
+    "y": 592
+  },
+  {
+    "name": "商曲",
+    "position": "side",
+    "x": 514,
+    "y": 615
+  },
+  {
+    "name": "肓俞",
+    "position": "side",
+    "x": 512,
+    "y": 656
+  },
+  {
+    "name": "中注",
+    "position": "side",
+    "x": 514,
+    "y": 683
+  },
+  {
+    "name": "四满",
+    "position": "side",
+    "x": 516,
+    "y": 710
+  },
+  {
+    "name": "气穴",
+    "position": "side",
+    "x": 516,
+    "y": 735
+  },
+  {
+    "name": "大赫",
+    "position": "side",
+    "x": 520,
+    "y": 763
+  },
+  {
+    "name": "横骨",
+    "position": "side",
+    "x": 531,
+    "y": 787
+  },
+  {
+    "name": "__END",
+    "position": "side",
+    "x": 542,
+    "y": 816
+  },
+  {
+    "name": "__START",
+    "position": "side",
+    "x": 534,
+    "y": 938
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 491,
+    "y": 965
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 475,
+    "y": 978
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 462,
+    "y": 992
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 450,
+    "y": 1008
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 440,
+    "y": 1025
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 435,
+    "y": 1037
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 432,
+    "y": 1050
+  },
+  {
+    "name": "阴谷",
+    "position": "side",
+    "x": 432,
+    "y": 1065
+  },
+  {
+    "name": "筑宾",
+    "position": "side",
+    "x": 448,
+    "y": 1250
+  },
+  {
+    "name": "交信",
+    "position": "side",
+    "x": 450,
+    "y": 1302
+  },
+  {
+    "name": "复溜",
+    "position": "side",
+    "x": 463,
+    "y": 1303
+  },
+  {
+    "name": "照海",
+    "position": "side",
+    "x": 440,
+    "y": 1366
+  },
+  {
+    "name": "水泉",
+    "position": "side",
+    "x": 464,
+    "y": 1388
+  },
+  {
+    "name": "大钟",
+    "position": "side",
+    "x": 475,
+    "y": 1362
+  },
+  {
+    "name": "太溪",
+    "position": "side",
+    "x": 462,
+    "y": 1337
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 455,
+    "y": 1359
+  },
+  {
+    "name": "__BYPASS",
+    "position": "side",
+    "x": 431,
+    "y": 1394
+  },
+  {
+    "name": "然谷",
+    "position": "side",
+    "x": 415,
+    "y": 1409
+  },
+  {
+    "name": "涌泉（位于脚底）",
+    "position": "side",
+    "x": 383,
+    "y": 1439
+  }
+]
