@@ -15,10 +15,11 @@ interface Meridians{
   height: number,
   handleName: Function,
   scale: number,
+  showText: boolean,
 }
 
 // 承接 state 作为该组件的 props 传入。
-export default function AnnotatedImage({ type, index, width, height, handleName, scale }: Meridians) {
+export default function AnnotatedImage({ type, index, width, height, handleName, scale, showText }: Meridians) {
   // 加载图片与经络数据。
   const [image] = useImage(`/img/${type}.png`);
   const [meridiansData, setMeridiansData] = useState<any>();
@@ -35,11 +36,12 @@ export default function AnnotatedImage({ type, index, width, height, handleName,
    * 该列表是一个一元数组，是去除了中断符号（__START __END __BYPASS）的常规点位。
    */
   const [dotList, setDotList] = useState<any[]>([]);
-
-  
   const [nameList, setNameList] = useState<string[]>([]); // 拆分名称列表
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
 
+  const handleText = () => {
+    
+  }
   // 经络坐标设置了可能出现的断点，当出现断点的时候对数组进行拆分。
   const divideBreakpoint = (data: any[]) => {
     // 最后的路径数组，分为几段就代表到时候会渲染几条路径。
@@ -141,7 +143,9 @@ export default function AnnotatedImage({ type, index, width, height, handleName,
           let y_pos = y * scale;
 
           return (
-            <React.Fragment key={_index}>
+            <React.Fragment 
+              key={_index}
+            >
               {/* 在点上绘制一个小圆圈 */}
               <Circle
                 x={x_pos}
@@ -150,10 +154,11 @@ export default function AnnotatedImage({ type, index, width, height, handleName,
                 fill={selectedIndex === _index ? "red" : "blue"} // 填充颜色
                 onClick={() => {
                   setSelectedIndex(_index);
+                  handleName(nameList[_index]); 
                 }}
               />
 
-              <Text
+              {showText && <Text
                 x={x_pos + 5} // 偏移文字到圆右侧
                 y={y_pos - 1} // 偏移文字到圆上方
                 text={nameList[_index]} // 点的编号
@@ -163,7 +168,7 @@ export default function AnnotatedImage({ type, index, width, height, handleName,
                   setSelectedIndex(_index);
                   handleName(nameList[_index]);
                 }}
-              />
+              />}
             </React.Fragment>
           )
         })}
