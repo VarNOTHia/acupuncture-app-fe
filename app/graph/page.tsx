@@ -117,7 +117,8 @@ export default function Graph() {
               </option>
             ))}
           </select>
-
+          
+          <div className="mb-6 mt-6"></div>
           <button 
             className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700"
             onClick={() => setShowText(!showText)}
