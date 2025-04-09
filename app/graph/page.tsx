@@ -125,14 +125,14 @@ export default function Graph() {
           >
             显示经络文字
           </button>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">
+          {/* <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">
             加入收藏夹
-          </button>
+          </button> */}
           <button 
             onClick={handleContinue}
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
           >
-            下一张
+            查看下个经络
           </button>
         </div>
       </div>

@@ -16,7 +16,7 @@ interface Meridians {
   handleCurrentList: (list: string[]) => void,
   scale: number,
   showText: boolean,
-  targetName: string, // 当前选中的穴位名称
+  targetName: string,
 }
 
 export default function AnnotatedImage({ type, index, width, height, handleName, handleCurrentList, scale, showText, targetName }: Meridians) {
