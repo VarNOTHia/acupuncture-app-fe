@@ -1,29 +1,39 @@
 "use client"
 import React, { useState } from "react";
-import { MAX_GROUP_OF, MERIDIANS_NAME } from "../constants";
+import { MAX_GROUP_OF, MERIDIANS_NAME } from "@/app/constants";
 import AnnotatedImage from "@/components/visualization/AnnotatedImage";
 import { useRouter } from "next/navigation";
+import DualButton from "@/components/utils/dual-button";
+import WaveForm from "@/components/visualization/WaveForm";
 
 const SCALE = 0.55;
 
+interface WaveFormOption {
+  type: "sine" | "square" | "triangle" | "flat"; // 添加flat类型
+  frequency: number;
+  amplitude: number;
+  duration?: number;
+  width?: number;
+  height?: number;
+  isPlaying?: boolean;
+}
+
 export default function Graph() {
-  const router = useRouter();
   const stageWidth = 1200 * SCALE;
   const stageHeight = 1600 * SCALE;
   
   // 当前显示的经络类型与编号
   const [imgType, setImgType] = useState<'front' | 'side' | 'back'>('front');
   const [imgIndex, setImgIndex] = useState(1);
-  
   // 当前选中的穴位名称（由图片点击或者下拉菜单选中）
   const [targetName, setTargetName] = useState<string>('');
-  
   // 是否显示文字
   const [showText, setShowText] = useState<boolean>(false);
-  
   // 当前穴位列表，由 AnnotatedImage 获取后回传
   const [currentAcupoints, setCurrentAcupoints] = useState<string[]>([]);
 
+  // 是否启动电刺激的 state。
+  const [isLaunched, setIsLaunched] = useState<boolean>(false);
   // 当图片上点击穴位时回调
   const handleName = (name: string) => {
     setTargetName(name);
@@ -47,23 +57,14 @@ export default function Graph() {
     const selectedName = e.target.value;
     setTargetName(selectedName);
   };
-
-  // 下一张图片（支持类型切换）
-  const handleContinue = () => {
-    if (imgIndex < MAX_GROUP_OF[imgType]) {
-      setImgIndex(imgIndex + 1);
-      setTargetName('');
-      return;
+  
+  const launchPulse = () => {
+    if (isLaunched) {
+      setIsLaunched(false);
+    } else {
+      setIsLaunched(true);
     }
-    const nextImgTypeMap: Record<'front' | 'side' | 'back', 'front' | 'side' | 'back'> = {
-      front: 'side',
-      side: 'back',
-      back: 'front',
-    };
-    setImgType(nextImgTypeMap[imgType]);
-    setImgIndex(1);
-    setTargetName('');
-  };
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -82,9 +83,18 @@ export default function Graph() {
             targetName={targetName}  // 传入当前选中穴位
           />
         </div>
-        {/* 右侧：下拉菜单及操作按钮 */}
+
+
         <div className="md:w-1/3 flex flex-col justify-center mt-3 md:mt-0 md:ml-8">
-          <h2 className="text-2xl font-bold mb-3">
+          <WaveForm
+            type="sine"
+            frequency={5}          // 5 Hz
+            amplitude={0.1}         // 强度
+            duration={3}           // 横轴时间为 1 秒
+            isLaunched={isLaunched} // 控制播放状态
+          />
+
+          <h2 className="text-2xl font-bold mb-3 mt-3">
             当前操作经络：{MERIDIANS_NAME[imgType][imgIndex]}
           </h2>
           <p className="mb-3">目前选中穴位：{targetName}</p>
@@ -105,7 +115,7 @@ export default function Graph() {
                 ))
             )}
           </select>
-
+          
           {/* 穴位下拉菜单 */}
           <select
             className="mb-4 p-2 border rounded bg-white text-gray-700"
@@ -130,18 +140,13 @@ export default function Graph() {
           {/* <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700">
             加入收藏夹
           </button> */}
-          <button 
-            onClick={handleContinue}
-            className="bg-blue-500 text-white py-2 px-4 rounded mb-2 hover:bg-blue-700"
-          >
-            查看下个经络
-          </button>
-          <button 
-            onClick={() => router.push("/")}
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-          >
-            返回上一页
-          </button>
+          <DualButton 
+            untriggeredText="启动电脉冲"
+            triggeredText="停止电脉冲"
+            onClick={launchPulse}
+            triggeredColor="gray"
+            unTriggeredColor="red"
+          />
         </div>
       </div>
     </div>

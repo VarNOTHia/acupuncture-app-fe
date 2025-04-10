@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "canvas": "^3.1.0",
+    "dotenv": "^16.4.7",
     "http-server": "^14.1.1",
     "konva": "^9.3.18",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-konva": "^19.0.2",
-    "use-image": "^1.1.1"
+    "use-image": "^1.1.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
