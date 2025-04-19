@@ -1,6 +1,6 @@
-import { useState } from "react";
 
 interface ModalProps {
+  children?: React.ReactNode;
   title: string;
   warn?: boolean;
   description?: string[] | null;
@@ -22,7 +22,7 @@ export default function Modal(props: ModalProps){
             </p>
           )
         })}
-
+        {props.children}
         <div className="flex justify-end gap-2">
           <button
             onClick={() => {

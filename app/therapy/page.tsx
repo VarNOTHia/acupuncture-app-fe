@@ -21,7 +21,7 @@ export default function Graph() {
   const [showText, setShowText] = useState<boolean>(false);
   const [currentAcupoints, setCurrentAcupoints] = useState<string[]>([]);
   const [isLaunched, setIsLaunched] = useState<boolean>(false);
-
+  
   // 波形可视化的部分
   const [waveType, setWaveType] = useState<waveType>('flat');
   const [freq, setFreq] = useState<number>(5);

@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     setMounted(true); // 组件已经挂载
 
-    if (!hasPermission) {
+    if (!hasPermission && !sessionStorage.getItem("hasShownNotice")) {
       setLoading(0);
       return;
     }
@@ -69,6 +69,14 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [hasPermission]);
 
+  // 在 sessionStorage 当中设计一个字段，从而阻止弹窗在用户确认之后反复调起。
+  useEffect(() => {
+    const hasShownNotice = sessionStorage.getItem("hasShownNotice");
+    if (hasShownNotice) {
+      setShowLocationNotice(false);
+    }
+  }, []);
+
   // 如果尚未挂载，返回占位内容，避免水合问题
   if (!mounted) {
     return <div>加载中...</div>;
@@ -83,17 +91,19 @@ export default function Home() {
           title = "定位权限收集"
           description={['经络开穴治疗需要依赖具体的地理位置判断如何治疗。为了根据您所在的地区提供更精准的经络 / 穴位治疗方案，我们需要获取您的地理位置（经纬度）。',
             '该信息仅用于本地展示，不会上传或保存。',
-            '如果不提供定位权限，将默认按照您所在的时区进行计算。'
+            '如果不提供定位权限，将默认按照您所在的时区进行计算。',
           ]}
           rejectText = "拒绝"
           acceptText = "我已知晓，使用定位"
           rejectHandler = {() => {
             setShowLocationNotice(false);
             setHasPermission(false);
+            sessionStorage.setItem("hasShownNotice", "true");
           }}
           acceptHandler = {() => {
             setShowLocationNotice(false);
             setHasPermission(true);
+            sessionStorage.setItem("hasShownNotice", "true");
           }}
           warn = {false}
         />
