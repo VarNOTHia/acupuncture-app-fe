@@ -12,7 +12,7 @@ export default function Menu(){
   return (
     <div className="flex items-center justify-center p-4 min-h-screen">
       {showModal && <Modal
-          title = '你确定吗'
+          title = '安全性警告'
           description = {['本选项绕过了治疗仪推荐的对症功能，将直接对接穴位进行电脉冲治疗。具备医疗人员相关资质方可使用，否则可能造成意外的人身伤害及财产损失。']}
           rejectText = '取消'
           acceptText = '我已知晓'
@@ -31,12 +31,19 @@ export default function Menu(){
         <div className="flex flex-col items-center gap-4 mt-6">
           <Button
             onClick={() => router.push("/")}
-            color="green"  
+            color="blue"  
           >
-            对症开穴治疗
+            匹配症状治疗
+          </Button>
+          <Button
+            onClick={() => router.push("/")}
+            color="orange"  
+          >
+            子午流注治疗
           </Button>
           <Button
             onClick={() => setShowModal(true)}  
+            color="red"
           >
             自由模式
           </Button>

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 
 interface WaveFormProps {
-  type: "sine" | "square" | "triangle" | "flat"; // 添加flat类型
+  type: "sine" | "square" | "triangle" | "sawtooth" | "flat" | "noise" | "smooth" | "pulse"; // 添加flat类型
   frequency: number;
   amplitude: number;
   duration?: number;
@@ -63,8 +63,33 @@ export default function WaveForm({
               y = Math.sign(Math.sin(phase));
               break;
             case "triangle":
-              const phaseMod = (phase / (2 * Math.PI)) % 1;
-              y = 2 * Math.abs(2 * phaseMod - 1) - 1;
+              // 调整相位归一化，确保在0到2π之间
+              let normalizedPhase = (phase % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
+              if (normalizedPhase < Math.PI) {
+                y = (2 * normalizedPhase / Math.PI) - 1; // 上升阶段：-1到1
+              } else {
+                y = 3 - (2 * normalizedPhase / Math.PI); // 下降阶段：1到-1
+              }
+              break;
+            case "sawtooth":
+              y = 2 * ((phase / (2 * Math.PI)) % 1);  // 线性上升的锯齿
+              break;
+            case "noise":
+              if(isLaunched){
+                y = Math.random() * 2 - 1;
+              } else {
+                y = 0;
+              }
+              break;
+            case "smooth":
+              if(isLaunched){
+                const noisePos = (phase / (2 * Math.PI)) % 1000;
+                y = Math.sin(noisePos) * Math.random() + 
+                    Math.sin(noisePos * 3.7) * Math.random() + 
+                    Math.sin(noisePos * 9.3) * Math.random();
+              } else {
+                y = 0;
+              }
               break;
           }
         }
