@@ -10,7 +10,7 @@ export function calculateSolarTime(latitude: number, longitude: number, date: Da
 
   // 计算与太阳时间相关的角度 B（单位：度）
   const B = (360 / 365) * (n - 81);
-
+  
   // 计算"方程时差"（分钟）
   const equationOfTime = 229.18 * (
     0.000075 +

@@ -1,5 +1,5 @@
 'use client'
-
+import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/utils/button';
@@ -8,12 +8,29 @@ export default function LoginPage() {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // 用于禁用按钮，防止重复点击
 
-  const handleLogin = () => {
-    // TODO: Implement login logic here
-    if (username && password) {
+  const handleLogin = async () => {
+    // Reset error message on each attempt
+    setError('');
+    setIsLoading(true); // 开始登录请求
+
+    const res = await signIn('credentials', {
+      redirect: false,
+      username,
+      password
+    });
+    
+    if (res?.ok) {
+      // 登录成功，跳转到首页
       router.push('/');
+    } else {
+      // 登录失败，设置错误信息
+      setError('登录失败，用户名或密码错误');
     }
+    
+    setIsLoading(false); // 请求完成后，重新启用按钮
   };
 
   return (
@@ -45,12 +62,19 @@ export default function LoginPage() {
           </div>
         </div>
 
+        {error && (
+          <div className="text-red-500 text-sm text-center">
+            {error}
+          </div>
+        )}
+
         <div className="flex flex-col items-center gap-4 mt-8">
           <Button
             onClick={handleLogin}
             color="blue"
+            disabled={isLoading} // 登录中时禁用按钮
           >
-            登录
+            {isLoading ? '登录中...' : '登录'}
           </Button>
           
           <button

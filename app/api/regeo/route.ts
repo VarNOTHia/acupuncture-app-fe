@@ -23,12 +23,11 @@ export async function GET(req: Request) {
     }
 
     const data = await response.json();
-    console.log(data);
 
     const city: string = data.regeocode?.addressComponent?.city || 'Unknown City'
-    console.log(city);
+
     return NextResponse.json({ city })
-  } catch (error) {
+  } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 }

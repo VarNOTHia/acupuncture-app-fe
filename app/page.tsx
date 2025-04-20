@@ -5,6 +5,10 @@ import { useCurrentTime } from "../hooks/utils/useCurrentTime";
 import { useSolarTime } from "../hooks/utils/useSolarTime";
 import Link from "next/link";
 import Modal from "@/components/utils/modal";
+import { signOut, useSession } from "next-auth/react";
+import Button from "@/components/utils/button";
+import Loading from "@/components/auth/loading";
+import { useUserStore } from "@/store/useUserStore";
 
 export default function Home() {
   const router = useRouter();
@@ -12,17 +16,19 @@ export default function Home() {
   const [latitude, setLatitude] = useState<number>(39.90);
   const [longitude, setLongitude] = useState<number>(116.40);
   const [loading, setLoading] = useState(10);
-  
   // 提前设置 mounted 状态，防止 SSR 与客户端不同步
   const [mounted, setMounted] = useState(false);
-  
+  const { data: session, status } = useSession();
+
   // 只有组件挂载后才调用这些 Hook
   const currentTime = useCurrentTime();
-  const solarTime = useSolarTime(latitude, longitude);
+  const [solarTime, rawSolarTime] = useSolarTime(latitude, longitude);
   
   // 控制是否展示“定位说明弹窗”
   const [showLocationNotice, setShowLocationNotice] = useState(true);
   const [hasPermission, setHasPermission] = useState(false);
+
+  const setCurrentLocation = useUserStore((state) => state.setLocation);
 
   useEffect(() => {
     setMounted(true); // 组件已经挂载
@@ -36,6 +42,10 @@ export default function Home() {
       (position) => {
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
+        setCurrentLocation(
+          position.coords.latitude,
+          position.coords.longitude
+        );
         // 调用 API 获取具体城市信息
         fetch(
           `/api/regeo?lat=${position.coords.latitude}&lon=${position.coords.longitude}`
@@ -77,9 +87,15 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (mounted && status === "unauthenticated") {
+      router.push("/login");
+    }
+  }, [mounted, status, router]);
+
   // 如果尚未挂载，返回占位内容，避免水合问题
-  if (!mounted) {
-    return <div>加载中...</div>;
+  if (!mounted || status === "loading") {
+    return <Loading />;
   }
 
   return (
@@ -112,7 +128,8 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center">
         经络子午流注治疗软件
       </h1>
-
+      
+      <p>您的 ID：{session?.user?.name}</p>
       <p>当前时间：{currentTime}</p>
       <p>当前太阳时：{solarTime}</p>
 
@@ -148,6 +165,16 @@ export default function Home() {
         >
           对症开穴治疗
         </button>
+        
+        <Button 
+          onClick={() => {signOut({
+            redirect: false,
+            callbackUrl: "/login",
+          })}}
+          color="gray"
+        >
+          登出
+        </Button>
       </div>
       </div>
     </div>

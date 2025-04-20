@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 
 export function useSolarTime(latitude: number, longitude: number) {
   const [solarTime, setSolarTime] = useState<string>("--:--:--"); // 初始值设置为占位符
+  const [rawSolarTime, setRawSolarTime] = useState<number | undefined>();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const currentDate = new Date();
-      const calculatedSolarTime = calculateSolarTime(latitude, longitude, currentDate);
-      
+      const calculatedSolarTime = (calculateSolarTime(latitude, longitude, currentDate) + 24) % 24;
+
+      setRawSolarTime(calculatedSolarTime);
       // 确保太阳时格式正确，例如转换为时:分:秒格式
       const hours = Math.floor(calculatedSolarTime);
       const minutes = Math.floor((calculatedSolarTime - hours) * 60);
@@ -22,5 +24,5 @@ export function useSolarTime(latitude: number, longitude: number) {
     return () => clearInterval(intervalId); // 清理定时器
   }, [latitude, longitude]); // 依赖经纬度变化
 
-  return solarTime; // 返回太阳时
+  return [solarTime, rawSolarTime]; // 返回太阳时
 }

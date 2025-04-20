@@ -2,6 +2,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick: () => void;
   color?: "blue" | "red" | "green" | "gray" | "orange"; // 可扩展
+  disabled?: boolean; // 可选属性
 }
 
 const colorMap = {
@@ -12,13 +13,14 @@ const colorMap = {
   orange: "bg-orange-500 hover:bg-orange-700",
 };
 
-export default function Button({ children, onClick, color = "blue" }: ButtonProps) {
+export default function Button({ children, onClick, color = "blue", disabled }: ButtonProps) {
   const colorClass = colorMap[color] || colorMap.blue;
 
   return (
     <button
       onClick={onClick}
       className={`text-white py-2 px-4 rounded mb-2 ${colorClass}`}
+      disabled={disabled} // 添加 disabled 属性
     >
       {children}
     </button>
