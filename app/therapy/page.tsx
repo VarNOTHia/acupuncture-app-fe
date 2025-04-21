@@ -9,8 +9,12 @@ import RequireAuth from "@/components/auth/RequireAuth";
 
 // 获取查询参数，一旦存在查询参数，不能再修改治疗的部位。（初始化）
 import { useSearchParams } from "next/navigation";
+import { useTherapyStore } from "@/store/useTherapyStore";
+import { now } from "next-auth/client/_utils";
+import { useSession } from "next-auth/react";
 
 const SCALE = 0.55;
+const AMP_SCALE = 10;
 
 type waveType = 'sine' | 'square' | 'sawtooth' | 'triangle' | 'flat' | "pulse";
 
@@ -18,6 +22,11 @@ export default function Therapy() {
   const stageWidth = 1200 * SCALE;
   const stageHeight = 1600 * SCALE;
   const router = useRouter();
+
+  // 埋点上报
+  const patientState = useTherapyStore((state) => state.patient);
+  const { data: session, status } = useSession();
+  
 
   // 可视化：经络
   const [imgType, setImgType] = useState<'front' | 'side' | 'back'>('front');
@@ -36,6 +45,9 @@ export default function Therapy() {
   // URL 查询参数的部分，如果存在参数则不能再设置部位。
   const searchParams = useSearchParams();
   const [showSelection, setShowSelection] = useState<boolean>(true);
+
+  // 暂存 log。
+  const [log, setLog] = useState({});
 
   useEffect(() => {
     const initialImgType = (searchParams.get('direction') || 'front') as 'front' | 'side' | 'back';
@@ -75,9 +87,39 @@ export default function Therapy() {
   };
   
   const launchPulse = () => {
+    // TODO: 添加埋点上报功能。
     if (isLaunched) {
+      const updatedLog = {
+        ...log,
+        endTime: new Date()
+      };
+      fetch('/api/therapy/log', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedLog),
+      });
       setIsLaunched(false);
     } else {
+      const log = {
+        username: session?.user?.name || '',
+        patient: patientState,
+        startTime: new Date(),
+        selectedData: {
+          line: MERIDIANS_NAME[imgType][imgIndex] as string,
+          dot: targetName,
+        },
+        therapyData: {
+          waveType: waveType,
+          freq: freq,
+          amp: amp * AMP_SCALE,
+          duration: duration,
+        },
+      }
+
+      setLog(log);
+      console.log(log);
       setIsLaunched(true);
     }
   }
@@ -143,7 +185,7 @@ export default function Therapy() {
               {/* 振幅控制 */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  强度: {(amp * 10).toFixed(2)}mA
+                  强度: {(amp * AMP_SCALE).toFixed(2)}mA
                 </label>
                 <input
                   type="range"

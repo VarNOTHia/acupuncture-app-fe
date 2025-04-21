@@ -142,30 +142,45 @@ export default function Home() {
         <p>正在定位，请稍后...（{loading}s）</p>
       )}
       <div className="flex flex-col items-center gap-4 mt-6">
-        <button
+        <Button
+          onClick={() => router.push("/about")}
+        >
+          查看操作说明
+        </Button>
+
+        <Button
           onClick={() => router.push("/graph")}
-          className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
         >
-          查看经络 / 穴位图
-        </button>
+          经络 / 穴位图
+        </Button>
 
-        <Link
-          href="https://zh.wikipedia.org/wiki/%E5%AD%90%E5%8D%88%E6%B5%81%E6%B3%A8"
-          className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
-        >
-          了解「子午流注」
-        </Link>
-
-        <button
+        <Button
           onClick={() => {
             router.push("/menu");
-            // TODO: 实现对症开穴功能
           }}
-          className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
         >
-          对症开穴治疗
-        </button>
-        
+          治疗方案目录
+        </Button>
+
+        <Button
+          onClick={() => window.open("https://zh.wikipedia.org/wiki/%E5%AD%90%E5%8D%88%E6%B5%81%E6%B3%A8", "_blank")}
+          color="orange"
+        >
+          了解「子午流注」
+        </Button>
+
+        <Button
+          color="green"
+          onClick={
+            () => {
+              router.push('/log');
+            }
+          }
+        >
+          查看治疗日志
+        </Button>
+
+
         <Button 
           onClick={() => {signOut({
             redirect: false,

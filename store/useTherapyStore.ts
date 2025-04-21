@@ -7,10 +7,13 @@ interface TherapyState {
     gender?: string,
     age?: number
   }
-  startTime?: Date;
+  time?: {
+    startTime: Date,
+    endTime: Date,
+  }
   selectedData: {
-    lineId: number,
-    dotId: number
+    line: string,
+    dot: string
   };
   therapyData: {
     duration?: number,  
@@ -22,19 +25,19 @@ interface TherapyState {
   // actions: 行为
   setUsername: (username: string) => void;
   setPatient: (data: { name: string; gender?: string; age?: number }) => void;
-  setStartTime: (time: Date) => void;
-  setSelectedData: (lineId: number, dotId: number) => void;
+  setTime: (startTime: Date, endTime: Date) => void;
+  setSelectedData: (line: string, dot: string) => void;
   updateTherapyData: (data: Partial<TherapyState["therapyData"]>) => void;
   resetTherapyData: () => void;
 }
 
 export const useTherapyStore = create<TherapyState>((set) => ({
   username: undefined,
-  patientData: undefined,
-  startTime: undefined,
+  patient: undefined,
+  time: undefined,
   selectedData: {
-    lineId: 0,
-    dotId: 0
+    line: '',
+    dot: ''
   },
   therapyData: {
     duration: undefined,
@@ -45,8 +48,15 @@ export const useTherapyStore = create<TherapyState>((set) => ({
 
   setUsername: (username) => set({ username }),
   setPatient: (data: { name: string; gender?: string; age?: number }) => set({ patient: data }),  
-  setStartTime: (time) => set({ startTime: time }),
-  setSelectedData: (lineId, dotId) => set({ selectedData: { lineId, dotId } }),
+  setTime: (startTime: Date, endTime: Date) => {
+    set({
+      time: {
+        startTime,
+        endTime
+      }
+    })
+  },
+  setSelectedData: (line, dot) => set({ selectedData: { line, dot } }),
   updateTherapyData: (data) =>
     set((state) => ({
       therapyData: {

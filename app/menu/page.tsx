@@ -10,9 +10,12 @@ import SessionWrapper from "../SessionWrapper";
 import { TIMEMAP } from "../constants";
 import { useSolarTime } from "@/hooks/utils/useSolarTime";
 import { useUserStore } from "@/store/useUserStore";
+import { useSession } from "next-auth/react";
 
 export default function Menu(){
   const router = useRouter();
+  const { data: session, status } = useSession();
+
   const [showWarningModal, setShowWarningModal] = useState(false);
   const [showPatientModal, setShowPatientModal] = useState(false);
   const location = useUserStore((state) => state.location);
@@ -20,7 +23,7 @@ export default function Menu(){
 
   const patient = useTherapyStore((state) => state.patient);
   const setPatient = useTherapyStore((state) => state.setPatient);
-
+  const setUsername = useTherapyStore((state) => state.setUsername);
   // 获取当前时间对应的经络，由于太阳时可能出现不同数据类型，所以用 as number 做转换。
   const getTask = () => TIMEMAP.find(
     t => 
@@ -75,8 +78,14 @@ export default function Menu(){
           description={['只有设置患者的基本信息才能启动治疗程序。']}
           rejectText = '取消'
           acceptText = '好'
-          rejectHandler={() => {setShowPatientModal(false);}}
-          acceptHandler={() => {setShowPatientModal(false);}}
+          rejectHandler={() => {
+            setShowPatientModal(false);
+            setUsername(session?.user?.name || '');
+          }}
+          acceptHandler={() => {
+            setShowPatientModal(false);
+            setUsername(session?.user?.name || '');
+          }}
         >
           <div className="flex flex-col items-center my-4">
             <Input
@@ -134,7 +143,7 @@ export default function Menu(){
             }}
             warn = {true}
           />}
-
+        
         {/* Panel */}
         <div className="max-w-sm w-full bg-zinc-900/50 rounded-lg shadow-lg p-8 space-y-4 pb-12">
           <div className="flex flex-col items-center mb-8 gap-4">

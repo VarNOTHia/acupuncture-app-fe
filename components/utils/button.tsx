@@ -19,7 +19,7 @@ export default function Button({ children, onClick, color = "blue", disabled }: 
   return (
     <button
       onClick={onClick}
-      className={`text-white py-2 px-4 rounded mb-2 ${colorClass}`}
+      className={`text-white py-2 px-4 rounded-lg ${colorClass}`}
       disabled={disabled} // 添加 disabled 属性
     >
       {children}
