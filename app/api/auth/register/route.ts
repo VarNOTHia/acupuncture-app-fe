@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   }
 
   // 使用 bcrypt 加密密码
-  const saltRounds = 10; // 可以根据需求调整
+  const saltRounds = 10; 
   const hashedPassword = await bcrypt.hash(password, saltRounds);
 
   // 插入到数据库，存储加密后的密码

@@ -71,12 +71,12 @@ export default function Menu(){
       setShowPatientModal(true);
     }
   }, []);
+
   return (
     <SessionWrapper>
       <div className="flex items-center justify-center p-4 min-h-screen">
         {showPatientModal && <Modal
           title = '设置患者信息'
-          description={['只有设置患者的基本信息才能启动治疗程序。']}
           rejectText = '取消'
           acceptText = '好'
           rejectHandler={() => {
@@ -88,6 +88,12 @@ export default function Menu(){
             setUsername(session?.user?.name || '');
           }}
         >
+          <p className="text-gray-700 mb-4">为了遵循<Link 
+            className="text-red-600 font-bold"
+            href={'/about'}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
+          > 安全原则 </Link>，只有确认患者的个人信息才能启动治疗程序。</p>
           <div className="flex flex-col items-center my-4">
             <Input
               type="text"
@@ -131,19 +137,32 @@ export default function Menu(){
           </div>
         </Modal>}
         {showWarningModal && <Modal
-            title = '安全性警告'
-            description = {['本选项绕过了治疗仪推荐的对症功能，将直接对接穴位进行电脉冲治疗。具备医疗人员相关资质方可使用，否则可能造成意外的人身伤害及财产损失。']}
-            rejectText = '取消'
-            acceptText = '我已知晓'
-            rejectHandler = {() => {
-              setShowWarningModal(false);
-            }}
-            acceptHandler = {() => {
-              setShowWarningModal(false);
-              redirect("/therapy");
-            }}
-            warn = {true}
-          />}
+          title = '安全性警告'
+          rejectText = '取消'
+          acceptText = '我已知晓'
+          rejectHandler = {() => {
+            setShowWarningModal(false);
+          }}
+          acceptHandler = {() => {
+            setShowWarningModal(false);
+            redirect("/therapy");
+          }}
+          warn = {true}
+          >
+          <p className="text-gray-700 mb-2">该模式不再按照对应症状或子午流注对治疗经络进行强制限制，可以选择不同经络和穴位进行治疗。</p>
+          <p className="text-gray-700 mb-4">请再次确认已经理解
+            <Link 
+            className="text-gray-700 font-bold"
+            href={'/about'}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
+          > 使用说明 </Link> 及<Link 
+            className="text-red-600 font-bold"
+            href={'/about'}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
+          > 安全原则 </Link> 的情况下，再启动治疗程序。</p>
+        </Modal>}
         
         {/* Panel */}
         <div className="max-w-sm w-full bg-zinc-900/50 rounded-lg shadow-lg p-8 space-y-4 pb-12">

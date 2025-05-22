@@ -8,7 +8,7 @@ export async function GET() {
 
   try {
     await client.connect();
-    const db = client.db(); // 默认取 URI 中的数据库名
+    const db = client.db();
     const departments = await db.collection("departments").find().toArray();
     return NextResponse.json(departments);
   } catch (err) {

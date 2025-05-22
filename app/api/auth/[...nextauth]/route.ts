@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { getDb } from '@/lib/db';
-import { compare } from 'bcryptjs'; // 或使用其他你注册时使用的哈希函数
+import { compare } from 'bcryptjs';
 
 const handler = NextAuth({
   providers: [
@@ -17,7 +17,7 @@ const handler = NextAuth({
 
         if (!user) return null;
 
-        // 比较密码（注册时需加密）
+        // 比较密码
         const isValid = await compare(credentials!.password, user.password);
         if (!isValid) return null;
 

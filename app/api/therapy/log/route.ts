@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
   const logs = await db
     .collection("therapyLogs")
     .find({ username })
-    .sort({ createdAt: -1 }) // 最新在前
+    .sort({ createdAt: -1 }) // 最新在前，每次排序以得到按时间的诊疗记录
     .toArray();
 
   return NextResponse.json({ logs }, { status: 200 });
