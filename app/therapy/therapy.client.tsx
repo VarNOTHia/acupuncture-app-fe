@@ -32,7 +32,7 @@ export default function Therapy() {
   const [imgType, setImgType] = useState<'front' | 'side' | 'back'>('front');
   const [imgIndex, setImgIndex] = useState(1);
   const [targetName, setTargetName] = useState<string>('');
-  const [showText, setShowText] = useState<boolean>(false);
+  const [showText, setShowText] = useState<boolean>(true);
   const [currentAcupoints, setCurrentAcupoints] = useState<string[]>([]);
   const [isLaunched, setIsLaunched] = useState<boolean>(false);
   

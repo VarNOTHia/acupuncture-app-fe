@@ -11,6 +11,7 @@ import { TIMEMAP } from "../constants";
 import { useSolarTime } from "@/hooks/utils/useSolarTime";
 import { useUserStore } from "@/store/useUserStore";
 import { useSession } from "next-auth/react";
+import { Route } from "lucide-react";
 
 export default function Menu(){
   const router = useRouter();
@@ -179,7 +180,7 @@ export default function Menu(){
               自由模式
             </Button>
             <Button
-              onClick={() => redirect("/")}
+              onClick={() => router.push("/")}
               color="gray"
             >
               返回上级
