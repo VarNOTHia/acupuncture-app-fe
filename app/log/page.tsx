@@ -55,20 +55,37 @@ export default function LogPage() {
   const totalPages = Math.ceil(logs.length / itemsPerPage);
   const getRemaining = (startTime: string, endTime: string): string => {
     let remaining_ms = Date.parse(endTime) - Date.parse(startTime);
-    return `${Math.floor(remaining_ms / 60000)} 分钟 ${Math.floor(remaining_ms / 1000)} 秒`;
+    return `${Math.floor(remaining_ms / 60000)} 分钟 ${Math.floor(remaining_ms / 1000) % 60} 秒`;
   }
+
+  const handleExport = () => {
+    const blob = new Blob([JSON.stringify(logs, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+  
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${session?.user?.name}-therapy-logs.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="p-6">
       <div className="w-full bg-white rounded-lg shadow">
         <div className="p-4 border-b border-gray-200 flex justify-between">
           <h2 className="text-xl font-semibold text-gray-700">治疗记录</h2>
-          <Button 
-            onClick={() => {
-              router.push('/');
-            }}
-          >
-            返回首页
-          </Button>
+          <div className='flex gap-2'>
+            <Button onClick={handleExport}>导出 JSON</Button>
+            <Button 
+              onClick={() => {
+                router.push('/');
+              }}
+            >
+              返回首页
+            </Button>
+          </div>
         </div>
         
         {loading ? (

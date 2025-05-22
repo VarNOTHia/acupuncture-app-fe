@@ -178,6 +178,12 @@ export default function Menu(){
             >
               自由模式
             </Button>
+            <Button
+              onClick={() => redirect("/")}
+              color="gray"
+            >
+              返回上级
+            </Button>
           </div>
           </div>
       </div>

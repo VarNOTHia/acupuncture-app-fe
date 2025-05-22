@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZiWU 8000 —— Next Generation Health Management System",
+  title: "子午流注 —— Next Generation Health Management System",
   description: "",
 };
 

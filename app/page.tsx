@@ -143,6 +143,14 @@ export default function Home() {
       )}
       <div className="flex flex-col items-center gap-4 mt-6">
         <Button
+          onClick={() => {
+            router.push("/menu");
+          }}
+        >
+          启动治疗程序
+        </Button>
+
+        <Button
           onClick={() => router.push("/about")}
         >
           查看操作说明
@@ -152,14 +160,6 @@ export default function Home() {
           onClick={() => router.push("/graph")}
         >
           经络 / 穴位图
-        </Button>
-
-        <Button
-          onClick={() => {
-            router.push("/menu");
-          }}
-        >
-          治疗方案目录
         </Button>
 
         <Button

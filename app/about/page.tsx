@@ -16,10 +16,6 @@ export default function AboutPage() {
         <li>进入治疗模式的时候可以选择不同的波形和穴位，每次电脉冲都会生成数据。</li>
         <li>每次治疗之前都需要收集患者信息，以便与前面电脉冲的数据生成报告。可以在用户页面查看并导出。</li>
       </ol>
-      <h2 className="text-xl font-semibold mt-6 mb-2">免责声明</h2>
-      <p className="text-gray-400">
-        所有症状与经络关联基于中医理论，使用请自行甄别。
-      </p>
     </div>
   );
 }
