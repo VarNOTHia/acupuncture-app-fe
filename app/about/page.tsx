@@ -17,7 +17,7 @@ export default function AboutPage() {
         使用说明
       </h2>
       <ol className="list-decimal list-inside mb-4 text-gray-300">
-        <li>使用之前请谨记下文 <strong className="text-red-600">安全原则</strong>，请 <strong className="text-red-600">务必</strong> 在 <strong className="text-red-600">确认安全</strong> 的前提下进行治疗。</li>
+        <li>使用之前请谨记下文 <strong className="text-red-600">安全原则</strong>，请务必在确认安全的前提下进行治疗。</li>
         <li>采集位置信息进行太阳时的计算，以便通过「子午流注」智能选择经络。</li>
         <li>在治疗目录里面可以选择常规对症治疗、子午流注治疗和自由模式。</li>
         <li>进入治疗模式的时候可以选择不同的波形和穴位，每次电脉冲都会生成数据。</li>

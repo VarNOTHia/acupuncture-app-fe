@@ -92,7 +92,6 @@ export default function Menu(){
             className="text-red-600 font-bold"
             href={'/about'}
             target="_blank"
-            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
           > 安全原则 </Link>，只有确认患者的个人信息才能启动治疗程序。</p>
           <div className="flex flex-col items-center my-4">
             <Input
@@ -155,17 +154,15 @@ export default function Menu(){
             className="text-gray-700 font-bold"
             href={'/about'}
             target="_blank"
-            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
           > 使用说明 </Link> 及<Link 
             className="text-red-600 font-bold"
             href={'/about'}
             target="_blank"
-            onClick={(e) => e.stopPropagation()}  // 防止事件冒泡
           > 安全原则 </Link> 的情况下，再启动治疗程序。</p>
         </Modal>}
         
         {/* Panel */}
-        <div className="max-w-sm w-full bg-zinc-900/50 rounded-lg shadow-lg p-8 space-y-4 pb-12">
+        <div className="max-w-sm w-full bg-zinc-800/50 rounded-lg shadow-lg p-8 space-y-4 pb-12">
           <div className="flex flex-col items-center mb-8 gap-4">
             <h3 className="text-2xl font-bold text-center">
               治疗目录

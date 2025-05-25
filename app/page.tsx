@@ -29,6 +29,26 @@ export default function Home() {
   const [hasPermission, setHasPermission] = useState(false);
 
   const setCurrentLocation = useUserStore((state) => state.setLocation);
+  
+  const handleSignOut = async () => {
+    try{
+      // 1. 调用NextAuth登出
+      await signOut({ 
+        redirect: false,
+        callbackUrl: '/login'
+      });
+
+      // 2. 清除所有客户端存储
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      // 3. 强制刷新并阻止缓存
+      const timestamp = Date.now();
+      window.location.assign(`/login?nocache=${timestamp}`);
+    } catch (error) {
+      console.error("Error during sign out:", error);
+    }
+  }
 
   useEffect(() => {
     setMounted(true); // 组件已经挂载
@@ -40,6 +60,7 @@ export default function Home() {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        console.log(position);
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
         setCurrentLocation(
@@ -151,7 +172,9 @@ export default function Home() {
         </Button>
 
         <Button
-          onClick={() => router.push("/about")}
+          onClick={() => {
+            window.open('/about', '_blank', 'noopener,noreferrer');
+          }}
         >
           查看操作说明
         </Button>
@@ -181,15 +204,15 @@ export default function Home() {
         </Button>
 
 
-        <Button 
-          onClick={() => {signOut({
-            redirect: false,
-            callbackUrl: "/login",
-          })}}
-          color="gray"
+        <button 
+          onClick={() => {
+            handleSignOut();
+            router.push("/login");
+          }}
+          className={`text-white py-2 px-4 rounded-lg bg-gray-500 hover:bg-gray-700`}
         >
           登出
-        </Button>
+        </button>
       </div>
       </div>
     </div>
