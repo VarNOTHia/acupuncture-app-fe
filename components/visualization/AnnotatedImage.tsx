@@ -63,7 +63,7 @@ export default function AnnotatedImage({ type, index, width, height, handleName,
         setLinesList(dividedData.map((line) => line.map((i: any) => [i.x, i.y])));
         const newNameList = data
           .filter((item: any) => item.name !== '__START' && item.name !== '__END' && item.name !== '__BYPASS')
-          .map(item => item.name);
+          .map((item: { name: string; }) => item.name);
         setNameList(newNameList);
         // 将穴位名称列表回传给父组件，用于下拉菜单
         handleCurrentList(newNameList);
